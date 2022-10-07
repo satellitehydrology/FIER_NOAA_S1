@@ -117,7 +117,7 @@ st.set_page_config(layout="wide")
 # Title and Description
 st.title("Forecasting Inundation Extents using REOF analysis (FIER) – Sentinel-1")
 
-thSelect=-3
+thSelect=-2
 row1_col1, row1_col2= st.columns([2, 1])
 # Set up Geemap
 with row1_col1:

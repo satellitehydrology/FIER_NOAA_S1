@@ -124,10 +124,10 @@ def run_fier(AOI_str, doi, in_run_type,thSelect):
     folder_name = 'Output'
 
     
-    syn_wf_fct.data[syn_wf_fct.data<=thSelect]=-3
+    syn_wf_fct.data[syn_wf_fct.data<=thSelect]=-2
     syn_wf_fct.data[syn_wf_fct.data>thSelect]=-1
     fig = plt.figure()
-    plt.imshow(syn_wf_fct.data, cmap=matplotlib.colors.ListedColormap(['blue', 'gray']), vmin=-3, vmax=-1,interpolation='none')
+    plt.imshow(syn_wf_fct.data, cmap=matplotlib.colors.ListedColormap(['blue', 'gray']), vmin=-2, vmax=-1,interpolation='none')
     plt.axis('off')
     plt.savefig(folder_name +'/water_fraction.png', bbox_inches='tight', dpi=300, pad_inches = 0)
     plt.close()
