@@ -159,17 +159,20 @@ with row1_col2:
             #)
             st.session_state.AOI_str = AOI_str
             st.write(st.session_state.AOI_str)
-    try:
-        thSelect2=st.select_slider('Select the threshold for inundation map.',options=[round(-3+i*0.1,1) for i in range(30)],value=thSelect)
-        if thSelect2!=thSelect:
-            thSelect=thSelect2
-            changeValue=True
-        else:
-            changeValue=True #False
-            
-    except:
-        pass
-        
+    
+    #try:
+    #    thSelect2=st.select_slider('Select the threshold for inundation map.',options=[round(-3+i*0.1,1) for i in range(30)],value=thSelect)
+    #    if thSelect2!=thSelect:
+    #        thSelect=thSelect2
+    #        changeValue=True
+    #    else:
+    #        changeValue=True #False
+    #        
+    #except:
+    #    pass
+    
+    changeValue=True
+    
     try:
         thSelect2=st.select_slider('Select the Streamflow',options=[10000,40000],value=0)
             
